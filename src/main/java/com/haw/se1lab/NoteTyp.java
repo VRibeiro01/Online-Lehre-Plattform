@@ -1,16 +1,16 @@
 package com.haw.se1lab;
 
 public class NoteTyp {
-    public int Note;
+    private int note;
 
     public NoteTyp(int nNote) {
-        if (Note < 0 || Note > 15) {
+        if (note < 0 || note > 15) {
             throw new ArithmeticException("Die Note ist ungültig");
         }
-        Note = nNote;
+        note = nNote;
     }
 
     public int getNote() {
-        return Note;
+        return note;
     }
 }

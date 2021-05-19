@@ -1,15 +1,22 @@
 package com.haw.se1lab;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Aufgabe {
 
     private Themenbereich themenbereich;
-    private String aufgabenstellung;
+    private Queue<String> aufgabenstellung;
     private int erreichbarePunkte;
 
-    public Aufgabe(Themenbereich themenbereich, String aufgabenstellung, int erreichbarePunkte){
+    public Aufgabe(Themenbereich themenbereich, int erreichbarePunkte){
         this.themenbereich=themenbereich;
-        this.aufgabenstellung=aufgabenstellung;
+        this.aufgabenstellung=new LinkedList<>();
         this.erreichbarePunkte=erreichbarePunkte;
+    }
+
+    public void setAufgabenstellung(Queue<String> aufgabenstellung) {
+        this.aufgabenstellung = aufgabenstellung;
     }
 
     public Themenbereich getThemenbereich() {
@@ -20,15 +27,11 @@ public class Aufgabe {
         this.themenbereich = themenbereich;
     }
 
-    public String getAufgabenstellung() {
+    public Queue getAufgabenstellung() {
         return aufgabenstellung;
     }
 
-    public void setAufgabenstellung(String aufgabenstellung) {
-        this.aufgabenstellung = aufgabenstellung;
-    }
-
-    public int getErreichbarePunkte() {
+       public int getErreichbarePunkte() {
         return erreichbarePunkte;
     }
 
