@@ -1,49 +1,73 @@
 package com.haw.se1lab;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Aufgabenblatt {
 
 
-    public String getName() {
-        return Name;
+    public List<Aufgaben> aufgaben;
+    public String themenbereich;
+    public Kurs kurs;
+    public String name;
+    private Lehrer ersteller;
+    private Schueler bearbeiter;
+
+
+   public Aufgabenblatt(String name, String themenbereich, Kurs kurs, Lehrer ersteller,Schueler bearbeiter){
+       this.name = name;
+       this.themenbereich = themenbereich;
+       this.kurs = kurs;
+       this.aufgaben = new ArrayList<>();
+       this.ersteller = ersteller;
+       this.bearbeiter = bearbeiter;
+   }
+
+    public List<Aufgaben> getAufgaben() {
+        return aufgaben;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setAufgaben(List<Aufgaben> aufgaben) {
+        this.aufgaben = aufgaben;
     }
 
-    public Aufgabe getAufgabe() {
-        return Aufgabe;
+    public String getThemenbereich() {
+        return themenbereich;
     }
 
-    public void setAufgabe(Aufgabe aufgabe) {
-        Aufgabe = aufgabe;
-    }
-
-    public Themenbereich getThemenbereich() {
-        return Themenbereich;
-    }
-
-    public void setThemenbereich(Themenbereich themenbereich) {
-        Themenbereich = themenbereich;
+    public void setThemenbereich(String themenbereich) {
+        this.themenbereich = themenbereich;
     }
 
     public Kurs getKurs() {
-        return Kurs;
+        return kurs;
     }
 
     public void setKurs(Kurs kurs) {
-        Kurs = kurs;
+        this.kurs = kurs;
     }
 
-    public Aufgabe Aufgabe;
-    public Themenbereich Themenbereich;
-    public Kurs Kurs;
-    public String Name;
+    public String getName() {
+        return name;
+    }
 
-   public Aufgabenblatt(String name, Themenbereich themenbereich,Aufgabe aufgabe, Kurs kurs){
-       this.Name = name;
-       this.Themenbereich = themenbereich;
-       this.Kurs = kurs;
-       this.Aufgabe = aufgabe;
-   }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Lehrer getErsteller() {
+        return ersteller;
+    }
+
+    public void setErsteller(Lehrer ersteller) {
+        this.ersteller = ersteller;
+    }
+
+    public Schueler getBearbeiter() {
+        return bearbeiter;
+    }
+
+    public void setBearbeiter(Schueler bearbeiter) {
+        this.bearbeiter = bearbeiter;
+    }
 }

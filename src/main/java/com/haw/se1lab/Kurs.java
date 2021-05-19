@@ -3,35 +3,61 @@ package com.haw.se1lab;
 import com.sun.xml.bind.v2.TODO;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Kurs {
 
-    private ArrayList<Schueler> Teilnehmer;
-    private Lehrer Verwalter;
-    private NotenÜbersichtsTyp Notenuebersicht;
-    private int Statistiken;
+    private String name;
+    private List<Schueler> teilnehmer;
+    private Lehrer verwalter;
+        private int statistiken;
+    private List<DateiTyp> dateien;
 
-    public ArrayList<Schueler> getTeilnehmer() {
-        return Teilnehmer;
+    public Kurs(String name, Lehrer verwalter, int statistiken, List<DateiTyp> dateien) {
+        this.name = name;
+        this.teilnehmer = new ArrayList<>();
+        this.verwalter = verwalter;
+        this.statistiken = statistiken;
+        this.dateien = new ArrayList<>();
     }
 
-    public void setTeilnehmer(ArrayList<Schueler> teilnehmer) {
-        Teilnehmer = teilnehmer;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Schueler> getTeilnehmer() {
+        return teilnehmer;
+    }
+
+    public void setTeilnehmer(List<Schueler> teilnehmer) {
+        this.teilnehmer = teilnehmer;
     }
 
     public Lehrer getVerwalter() {
-        return Verwalter;
+        return verwalter;
     }
 
     public void setVerwalter(Lehrer verwalter) {
-        Verwalter = verwalter;
+        verwalter = verwalter;
     }
 
-    public NotenÜbersichtsTyp getNotenuebersicht() {
-        return Notenuebersicht;
+    public int getStatistiken() {
+        return statistiken;
     }
 
-    public void setNotenuebersicht(NotenÜbersichtsTyp notenuebersicht) {
-        Notenuebersicht = notenuebersicht;
+    public void setStatistiken(int statistiken) {
+        statistiken = statistiken;
+    }
+
+    public List<DateiTyp> getDateien() {
+        return dateien;
+    }
+
+    public void setDateien(List<DateiTyp> dateien) {
+        this.dateien = dateien;
     }
 }
