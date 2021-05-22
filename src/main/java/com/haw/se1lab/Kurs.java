@@ -10,7 +10,7 @@ public class Kurs {
     private String name;
     private List<Schueler> teilnehmer;
     private Lehrer verwalter;
-        private int statistiken;
+    private int statistiken;
     private List<DateiTyp> dateien;
 
     public Kurs(String name, Lehrer verwalter, int statistiken, List<DateiTyp> dateien) {

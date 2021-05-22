@@ -3,12 +3,12 @@ package com.haw.se1lab;
 public class ChatNachricht {
 
     private Person sender;
-    private Person empfänger;
+    private Person empfaenger;
     private String nachricht;
 
     public ChatNachricht(Person sender, Person empfänger, String nachricht) {
         this.sender = sender;
-        this.empfänger = empfänger;
+        this.empfaenger = empfänger;
         this.nachricht = nachricht;
     }
 
@@ -22,11 +22,11 @@ public class ChatNachricht {
     }
 
     public Person getEmpfänger() {
-        return empfänger;
+        return empfaenger;
     }
 
     public void setEmpfänger(Person empfänger) {
-        this.empfänger = empfänger;
+        this.empfaenger = empfänger;
     }
 
     public String getNachricht() {

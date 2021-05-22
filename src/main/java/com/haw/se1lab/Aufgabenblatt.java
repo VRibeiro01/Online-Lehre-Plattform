@@ -6,10 +6,10 @@ import java.util.List;
 public abstract class Aufgabenblatt {
 
 
-    public List<Aufgaben> aufgaben;
-    public String themenbereich;
-    public Kurs kurs;
-    public String name;
+    private List<Aufgabe> aufgaben;
+    private String themenbereich;
+    private Kurs kurs;
+    private String name;
     private Lehrer ersteller;
     private Schueler bearbeiter;
 
@@ -23,11 +23,11 @@ public abstract class Aufgabenblatt {
        this.bearbeiter = bearbeiter;
    }
 
-    public List<Aufgaben> getAufgaben() {
+    public List<Aufgabe> getAufgaben() {
         return aufgaben;
     }
 
-    public void setAufgaben(List<Aufgaben> aufgaben) {
+    public void setAufgaben(List<Aufgabe> aufgaben) {
         this.aufgaben = aufgaben;
     }
 

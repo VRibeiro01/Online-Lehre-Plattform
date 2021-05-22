@@ -1,7 +1,7 @@
 package com.haw.se1lab;
 
 
-public class Aufgaben {
+public class Aufgabe {
 
     private String themenbereich;
     private String aufgabenstellung;
@@ -9,7 +9,7 @@ public class Aufgaben {
     private String notiz;
 
 
-    public Aufgaben(String themenbereich, String aufgabenstellung, int erreichbarePunkte, String notiz) {
+    public Aufgabe(String themenbereich, String aufgabenstellung, int erreichbarePunkte, String notiz) {
         this.themenbereich = themenbereich;
         this.aufgabenstellung = aufgabenstellung;
         this.erreichbarePunkte = erreichbarePunkte;
