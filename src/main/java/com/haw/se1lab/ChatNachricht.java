@@ -6,9 +6,9 @@ public class ChatNachricht {
     private Person empfaenger;
     private String nachricht;
 
-    public ChatNachricht(Person sender, Person empfänger, String nachricht) {
+    public ChatNachricht(Person sender, Person empfaenger, String nachricht) {
         this.sender = sender;
-        this.empfaenger = empfänger;
+        this.empfaenger = empfaenger;
         this.nachricht = nachricht;
     }
 
@@ -21,12 +21,12 @@ public class ChatNachricht {
         this.sender = sender;
     }
 
-    public Person getEmpfänger() {
+    public Person getEmpfaenger() {
         return empfaenger;
     }
 
-    public void setEmpfänger(Person empfänger) {
-        this.empfaenger = empfänger;
+    public void setEmpfaenger(Person empfaenger) {
+        this.empfaenger = empfaenger;
     }
 
     public String getNachricht() {
