@@ -18,4 +18,12 @@ public class Unterrichtsaufgabe extends Aufgabenblatt {
 
     public Unterrichtsaufgabe() {
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
