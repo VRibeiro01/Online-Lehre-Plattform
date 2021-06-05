@@ -1,17 +1,36 @@
-package com.haw.se1lab;
+package com.haw.se1lab.entitaeten;
 
-import com.sun.xml.bind.v2.TODO;
+import com.haw.se1lab.datentypen.DateiTyp;
+import org.hibernate.annotations.ManyToAny;
 
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Kurs {
+@Entity
 
+public class Kurs {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @NotNull
     private String name;
+
+    @ManyToMany
     private List<Schueler> teilnehmer;
+
+    @ManyToOne
     private Lehrer verwalter;
+
+
     private int statistiken;
+
+  @ElementCollection // spezifiziert eine Collection von Embeddable Typen
     private List<DateiTyp> dateien;
+
 
     public Kurs(String name, Lehrer verwalter, int statistiken, List<DateiTyp> dateien) {
         this.name = name;
@@ -19,6 +38,10 @@ public class Kurs {
         this.verwalter = verwalter;
         this.statistiken = statistiken;
         this.dateien = new ArrayList<>();
+    }
+
+    public Kurs() {
+
     }
 
     public String getName() {
@@ -60,4 +83,13 @@ public class Kurs {
     public void setDateien(List<DateiTyp> dateien) {
         this.dateien = dateien;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
+

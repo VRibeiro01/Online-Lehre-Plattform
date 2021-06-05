@@ -1,16 +1,26 @@
-package com.haw.se1lab;
+package com.haw.se1lab.entitaeten;
 
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Aufgabenblatt {
 
-
+    @OneToMany
     private List<Aufgabe> aufgaben;
+
     private String themenbereich;
+
+    @ManyToOne
     private Kurs kurs;
+
     private String name;
+
+    @ManyToOne
     private Lehrer ersteller;
+
+    @ManyToOne
     private Schueler bearbeiter;
 
 
@@ -22,6 +32,8 @@ public abstract class Aufgabenblatt {
        this.ersteller = ersteller;
        this.bearbeiter = bearbeiter;
    }
+
+   public Aufgabenblatt(){}
 
     public List<Aufgabe> getAufgaben() {
         return aufgaben;
@@ -70,4 +82,7 @@ public abstract class Aufgabenblatt {
     public void setBearbeiter(Schueler bearbeiter) {
         this.bearbeiter = bearbeiter;
     }
+
+
 }
+

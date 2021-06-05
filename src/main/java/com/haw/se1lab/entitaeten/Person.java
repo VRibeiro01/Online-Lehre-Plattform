@@ -1,6 +1,15 @@
-package com.haw.se1lab;
+package com.haw.se1lab.entitaeten;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity //Sollte Person auch eine Entität sein?
 public abstract class Person {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String name;
     private String email;
@@ -9,6 +18,9 @@ public abstract class Person {
         this.name = name;
         this.email = email;
     }
+
+    // Default-Konstruktor wegen Klassen Schueler, Lehrer gefordert
+    public Person(){}
 
     public String getName() {
         return name;
@@ -24,5 +36,13 @@ public abstract class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

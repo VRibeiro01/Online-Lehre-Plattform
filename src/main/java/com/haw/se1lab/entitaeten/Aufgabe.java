@@ -1,11 +1,21 @@
-package com.haw.se1lab;
+package com.haw.se1lab.entitaeten;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Aufgabe {
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String themenbereich;
+
     private String aufgabenstellung;
+
     private int erreichbarePunkte;
+
     private String notiz;
 
 
@@ -15,6 +25,10 @@ public class Aufgabe {
         this.erreichbarePunkte = erreichbarePunkte;
         this.notiz = notiz;
     }
+
+    public Aufgabe() {
+    }
+
 
     public String getThemenbereich() {
         return themenbereich;
@@ -46,5 +60,13 @@ public class Aufgabe {
 
     public void setNotiz(String notiz) {
         this.notiz = notiz;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
