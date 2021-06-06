@@ -1,23 +1,26 @@
 package logik.useCase;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.haw.se1lab.Application;
-import com.haw.se1lab.datenzugriff.api.entitaeten.Aufgabe;
-import com.haw.se1lab.datenzugriff.api.repo.AufgabeRepo;
-import com.haw.se1lab.logik.usecase.NotizUseCase;
+import com.haw.se1lab.dokumente.datenzugriff.api.entitaeten.Aufgabe;
+import com.haw.se1lab.dokumente.datenzugriff.api.repo.AufgabeRepo;
+import com.haw.se1lab.dokumente.logik.useCase.NotizUseCase;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import javax.transaction.Transactional;
 
 
-
-@SpringBootTest(classes = Application.class) // test environment
-@ExtendWith(SpringExtension.class) // required to use Spring TestContext Framework in JUnit 5
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = Application.class)
+@Transactional
 public class NotizUseCaseTest {
 
     @Autowired // automatically initializes the field with a Spring bean of a matching type
@@ -25,12 +28,10 @@ public class NotizUseCaseTest {
 
     @Autowired // automatically initializes the field with a Spring bean of a matching type
     private AufgabeRepo aufgabeRepo;
-
-
     private Aufgabe aufgabe;
 
-
-    public void initialize(){
+    @BeforeEach
+     void setup(){
         aufgabe = new Aufgabe("Lyrik","Was ist ein Jambus?",3);
         aufgabeRepo.save(aufgabe);
     }
@@ -47,11 +48,19 @@ public class NotizUseCaseTest {
      String notiz = "Du hast Jambus mit Trochäus verwechselt";
 
      notizUseCase.notizHinzufuegen(aufgabe,notiz);
-
+        Long result_id = aufgabeRepo.findAll().get(0).getId();
+        Long expected_id = aufgabe.getId();
+        String result_notiz = aufgabeRepo.findAll().get(0).getNotiz();
         long entitaetenAnzahl = aufgabeRepo.count();
+
+        //Prüfen ob Tupelanzahl in der Tabelle stimmt, denn Tupel soll geupdated werden und nicht nochmal eingefügt werden
         assertThat(entitaetenAnzahl).isEqualTo(1);
 
+        // Prüfen ob id der Aufgabe in der Tabelle die gleiche Id wie die übergebene Aufgabe hat
+        assertEquals(expected_id,result_id,0.01);
 
+        // Prüfen, ob Notiz tatsächlich eingefügt wurde
+        assertEquals(notiz,result_notiz);
     }
 
 }
