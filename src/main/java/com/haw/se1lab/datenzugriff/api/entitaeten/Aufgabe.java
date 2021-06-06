@@ -16,14 +16,17 @@ public class Aufgabe {
 
     private int erreichbarePunkte;
 
+    private int erreichtePunkte;
+
     private String notiz;
 
 
-    public Aufgabe(String themenbereich, String aufgabenstellung, int erreichbarePunkte, String notiz) {
+    public Aufgabe(String themenbereich, String aufgabenstellung, int erreichbarePunkte) {
         this.themenbereich = themenbereich;
         this.aufgabenstellung = aufgabenstellung;
         this.erreichbarePunkte = erreichbarePunkte;
-        this.notiz = notiz;
+        this.notiz = null;
+        this.erreichtePunkte = -1;
     }
 
     public Aufgabe() {
