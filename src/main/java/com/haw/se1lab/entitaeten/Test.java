@@ -12,10 +12,10 @@ import javax.persistence.*;
 @Entity
 public class Test extends Aufgabenblatt {
 
-    @Id
+   /* @Id
     @GeneratedValue
     private Long id;
-
+*/
  // Bei Enum keine Annotation notwendig?
     private NoteTyp note;
 
@@ -37,11 +37,11 @@ public class Test extends Aufgabenblatt {
         this.note = note;
     }
 
-    public Long getId() {
+    /*public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
+    }*/
 }

@@ -1,10 +1,9 @@
 package com.haw.se1lab.entitaeten;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity //Sollte Person auch eine Entität sein?
+@Entity
+@Inheritance
 public abstract class Person {
 
     @Id

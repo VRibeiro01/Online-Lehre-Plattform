@@ -1,11 +1,15 @@
 package com.haw.se1lab.entitaeten;
 
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@MappedSuperclass
 public abstract class Aufgabenblatt {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @OneToMany
     private List<Aufgabe> aufgaben;

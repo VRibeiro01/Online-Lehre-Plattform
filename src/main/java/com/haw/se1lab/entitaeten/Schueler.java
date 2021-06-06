@@ -9,9 +9,9 @@ import javax.persistence.Id;
 @Entity
 public class Schueler extends Person {
 
-    @Id
+   /* @Id
     @GeneratedValue
-    private Long id;
+    private Long id;*/
 
     public Schueler(String name, String email) {
         super(name, email);
@@ -21,11 +21,11 @@ public class Schueler extends Person {
     public Schueler() {
     }
 
-    public Long getId() {
+ /*   public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
+    }*/
 }

@@ -7,9 +7,9 @@ import javax.persistence.Id;
 @Entity
 public class Unterrichtsaufgabe extends Aufgabenblatt {
 
-    @Id
+  /*  @Id
     @GeneratedValue
-    private Long id;
+    private Long id;*/
 
     public Unterrichtsaufgabe(String name, String themenbereich, Kurs kurs, Lehrer ersteller, Schueler bearbeiter){
         super(name,themenbereich,kurs, ersteller, bearbeiter);
@@ -19,11 +19,11 @@ public class Unterrichtsaufgabe extends Aufgabenblatt {
     public Unterrichtsaufgabe() {
     }
 
-    public Long getId() {
+    /*public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
+    }*/
 }

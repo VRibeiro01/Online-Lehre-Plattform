@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-
 public class Kurs {
     @Id
     @GeneratedValue
@@ -19,7 +18,9 @@ public class Kurs {
     @NotNull
     private String name;
 
+
     @ManyToMany
+    @JoinTable
     private List<Schueler> teilnehmer;
 
     @ManyToOne
@@ -28,7 +29,7 @@ public class Kurs {
 
     private int statistiken;
 
-  @ElementCollection // spezifiziert eine Collection von Embeddable Typen
+  @ElementCollection// spezifiziert eine Collection von Embeddable Typen
     private List<DateiTyp> dateien;
 
 
