@@ -1,4 +1,4 @@
-package com.haw.se1lab.entitaeten;
+package com.haw.se1lab.datenzugriff.api.entitaeten;
 
 import javax.persistence.*;
 

@@ -1,7 +1,6 @@
-package com.haw.se1lab.entitaeten;
+package com.haw.se1lab.datenzugriff.api.entitaeten;
 
 import com.haw.se1lab.datentypen.DateiTyp;
-import org.hibernate.annotations.ManyToAny;
 
 
 import javax.persistence.*;

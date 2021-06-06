@@ -1,11 +1,7 @@
-package com.haw.se1lab.entitaeten;
+package com.haw.se1lab.datenzugriff.api.entitaeten;
 
 
 import com.haw.se1lab.datentypen.NoteTyp;
-import com.haw.se1lab.entitaeten.Aufgabenblatt;
-import com.haw.se1lab.entitaeten.Kurs;
-import com.haw.se1lab.entitaeten.Lehrer;
-import com.haw.se1lab.entitaeten.Schueler;
 
 import javax.persistence.*;
 
