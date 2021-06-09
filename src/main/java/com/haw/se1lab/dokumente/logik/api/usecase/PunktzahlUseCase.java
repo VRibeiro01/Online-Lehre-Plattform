@@ -1,4 +1,4 @@
-package com.haw.se1lab.dokumente.logik.useCase;
+package com.haw.se1lab.dokumente.logik.api.usecase;
 
 import com.haw.se1lab.dokumente.datenzugriff.api.entitaeten.Aufgabe;
 

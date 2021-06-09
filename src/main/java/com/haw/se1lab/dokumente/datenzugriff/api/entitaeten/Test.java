@@ -1,8 +1,7 @@
 package com.haw.se1lab.dokumente.datenzugriff.api.entitaeten;
 
 
-import com.haw.se1lab.dokumente.datentyp.NoteTyp;
-import com.haw.se1lab.dokumente.datenzugriff.api.entitaeten.Aufgabenblatt;
+import com.haw.se1lab.datentyp.NoteTyp;
 import com.haw.se1lab.kursverwaltung.datenzugriff.api.entitaeten.Kurs;
 import com.haw.se1lab.nutzer.datenzugriff.api.entitaeten.Lehrer;
 import com.haw.se1lab.nutzer.datenzugriff.api.entitaeten.Schueler;
@@ -13,7 +12,7 @@ import javax.persistence.*;
 public class Test extends Aufgabenblatt {
 
 
- // Bei Enum keine Annotation notwendig
+ @Enumerated(EnumType.STRING)
     private NoteTyp note;
 
 

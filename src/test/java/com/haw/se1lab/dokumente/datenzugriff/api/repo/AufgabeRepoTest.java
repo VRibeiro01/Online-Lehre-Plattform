@@ -1,11 +1,11 @@
-package com.haw.se1lab.aufgabe;
+package com.haw.se1lab.dokumente.datenzugriff.api.repo;
 
 
 import java.util.List;
 
 import com.haw.se1lab.Application;
 import com.haw.se1lab.dokumente.datenzugriff.api.entitaeten.Aufgabe;
-import com.haw.se1lab.dokumente.datenzugriff.api.repo.AufgabeRepo;
+import com.haw.se1lab.dokumente.datenzugriff.api.repo.AufgabeRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AufgabeRepoTest {
 
     @Autowired // automatically initializes the field with a Spring bean of a matching type
-    private AufgabeRepo aufgabeRepo;
+    private AufgabeRepository aufgabeRepo;
 
     private Aufgabe aufgabe;
 
@@ -42,7 +42,7 @@ public class AufgabeRepoTest {
     }
 
     @Test
-    public void find_test(){
+    public void findAll(){
         Long id = aufgabe.getId();
         List<Aufgabe> resultList = aufgabeRepo.findAll();
         assertEquals(1,resultList.size());

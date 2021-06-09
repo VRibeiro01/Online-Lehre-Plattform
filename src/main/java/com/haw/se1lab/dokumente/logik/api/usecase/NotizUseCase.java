@@ -1,4 +1,4 @@
-package com.haw.se1lab.dokumente.logik.useCase;
+package com.haw.se1lab.dokumente.logik.api.usecase;
 
 import com.haw.se1lab.dokumente.datenzugriff.api.entitaeten.Aufgabe;
 
@@ -18,5 +18,5 @@ public interface NotizUseCase {
      * @return void : Methode ändert ein Objekt, hat kein Rückgabewert
      */
 
-    Aufgabe notizHinzufuegen(Aufgabe aufgabe,String notiz);
+    void notizHinzufuegen(Aufgabe aufgabe,String notiz);
 }

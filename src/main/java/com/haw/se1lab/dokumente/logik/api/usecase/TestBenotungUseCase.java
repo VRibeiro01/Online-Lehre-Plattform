@@ -1,6 +1,6 @@
-package com.haw.se1lab.dokumente.logik.useCase;
+package com.haw.se1lab.dokumente.logik.api.usecase;
 
-import com.haw.se1lab.dokumente.datentyp.NoteTyp;
+import com.haw.se1lab.datentyp.NoteTyp;
 import com.haw.se1lab.dokumente.datenzugriff.api.entitaeten.Test;
 
 public interface TestBenotungUseCase {

@@ -1,6 +1,6 @@
 package com.haw.se1lab.kursverwaltung.datenzugriff.api.entitaeten;
 
-import com.haw.se1lab.kursverwaltung.datentypen.DateiTyp;
+import com.haw.se1lab.datentyp.DateiTyp;
 import com.haw.se1lab.nutzer.datenzugriff.api.entitaeten.Lehrer;
 import com.haw.se1lab.nutzer.datenzugriff.api.entitaeten.Schueler;
 

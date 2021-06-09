@@ -1,4 +1,4 @@
-package com.haw.se1lab.kursverwaltung.datentypen;
+package com.haw.se1lab.datentyp;
 
 import javax.persistence.Embeddable;
 import java.net.MalformedURLException;

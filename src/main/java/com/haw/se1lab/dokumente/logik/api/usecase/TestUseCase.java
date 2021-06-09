@@ -1,4 +1,4 @@
-package com.haw.se1lab.dokumente.logik.useCase;
+package com.haw.se1lab.dokumente.logik.api.usecase;
 
 
 import com.haw.se1lab.dokumente.datenzugriff.api.entitaeten.Test;
@@ -25,13 +25,13 @@ public interface TestUseCase {
 
 
     /**
-     * Lädt einen gesuchten Test mit der angegebenen Id aus einer Liste von Tests, die von der Datenbank geladen wurde
+     * Lädt einen gesuchten Test mit der angegebenen Id
      *
-     * @param testListe : Liste von geladenen Tests
+     *
      * @param test_id : id des gesuchten Tests
      *
-     * @return Test: gesuchter Test wird zurückgegeben
+     * @return Test: gesuchter Test wird zurückgegeben.  Lifert <code>null</code>, wenn Test nicht gefunden wird
      */
 
-    Test ladeTest(List<Test>testListe, Long test_id);
+    Test ladeTest(Long test_id);
 }
