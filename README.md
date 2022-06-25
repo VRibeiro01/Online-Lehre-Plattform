@@ -1,6 +1,6 @@
 # Lernplattform für die Online-Lehre in der Corona Pandemie
 
-Mit dieser Anwendung soll die Online-Lehre unterstützt werden, in dem Lehrer ihre Unterrichtsfächer, Aufgabenzetteln und Klausuren erstellen, bearbeite, und verwalten können. Die Schüler haben einen zentrale Stelle für all ihre Hausaufgaben, Einführungstexte und Noten.
+Mit dieser Anwendung soll die Online-Lehre unterstützt werden, in dem Lehrer ihre Unterrichtsfächer, Aufgabenzetteln und Klausuren erstellen, bearbeiten und verwalten können. Die Schüler haben eine zentrale Stelle für all ihre Hausaufgaben, Einführungstexte und Noten.
 
 
 
